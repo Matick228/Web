@@ -9,7 +9,7 @@ body {
     line-height: 1.6; /* Межстрочный интервал */
     text-align: justify; /* Выравнивание текста */
     color: rgb(58, 107, 36); /* Цвет текста в RGB */
-    background-image: url('./assets/images/back.jpg'); /* Путь к картинке */
+    background-image: url('./assets/images/back.webp'); /* Оптимизированный формат изображения */
     background-size: cover; /* Масштабирование */
     background-repeat: no-repeat; /* Убираем повторение */
     background-attachment: fixed; /* Фиксируем фон при прокрутке */
@@ -62,13 +62,26 @@ ol > li::first-letter{
 }
 
 /* Установка размеров и позиционирования для изображений */
-img {
+figure {
     max-width: 100%;
-    height: auto;
-    display: block;
     margin: 0 auto;
     position: relative;
     z-index: 1;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Оптимальная обрезка изображений */
+    display: block;
+}
+
+/* Контейнер для изображений */
+figure {
+    max-width: 700px;
+    min-width: 300px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 /* Контейнер для списка ссылок */
