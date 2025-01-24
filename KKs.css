@@ -9,7 +9,8 @@ body {
     line-height: 1.6; /* Межстрочный интервал */
     text-align: justify; /* Выравнивание текста */
     color: rgb(58, 107, 36); /* Цвет текста в RGB */
-    background-image: url('./assets/images/back.webp'); /* Оптимизированный формат изображения */
+    /* Бело-золотой градиент на фон */
+    background: linear-gradient(to bottom, #e3f614, #f9fcfd); /* Плавный переход от белого к золотому */
     background-size: cover; /* Масштабирование */
     background-repeat: no-repeat; /* Убираем повторение */
     background-attachment: fixed; /* Фиксируем фон при прокрутке */
