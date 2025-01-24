@@ -5,23 +5,27 @@
 
 body {
     font-family: 'Roboto', Arial, sans-serif;
-    font-size: 16px; /* Размер текста */
+    font-size: 1rem; /* Размер текста */
     line-height: 1.6; /* Межстрочный интервал */
     text-align: justify; /* Выравнивание текста */
-    color: #3a6b24; /* Цвет текста */
-    background-image: url('back.jpg'); /* Путь к картинке */
+    color: rgb(58, 107, 36); /* Цвет текста в RGB */
+    background-image: url('./assets/images/back.jpg'); /* Путь к картинке */
     background-size: cover; /* Масштабирование */
     background-repeat: no-repeat; /* Убираем повторение */
     background-attachment: fixed; /* Фиксируем фон при прокрутке */
     background-position: center; /* Центрирование фона */
     border: 2px solid #0a0909; /* Граница */
-    border-radius: 30px; /* Скругление границ */
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
+    border-radius: 2em; /* Скругление границ */
+    padding: 1.25rem;
+    margin: 1.25rem auto;
+    max-width: 50em;
     height: auto;
     min-height: 100vh; /* Минимальная высота на всю высоту окна */
     position: relative; /* Относительное позиционирование */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 h1, h2 {
@@ -30,6 +34,7 @@ h1, h2 {
     max-width: 100%;
     position: relative;
     z-index: 2; /* Поднимаем заголовки выше */
+    text-align: center;
 }
 
 a {
@@ -53,7 +58,7 @@ p::after{
 ol > li::first-letter{
     font-size: 2em; /* Увеличиваем размер */
     font-weight: bold; /* Жирный шрифт */
-    color: #FF4500; /* Оранжевый цвет */
+    color: hsl(16, 100%, 50%); /* Оранжевый цвет через HSL */
 }
 
 /* Установка размеров и позиционирования для изображений */
@@ -68,16 +73,22 @@ img {
 
 /* Контейнер для списка ссылок */
 ul {
-    max-width: 600px;
-    min-width: 300px;
+    max-width: 60%;
+    min-width: 50%;
     margin: 0 auto;
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 /* Контейнер для списка задач */
 ol {
-    max-width: 600px;
-    min-width: 300px;
+    max-width: 60%;
+    min-width: 30%;
     margin: 0 auto;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
