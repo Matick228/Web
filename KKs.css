@@ -1,28 +1,27 @@
-/* Устанавливаем box-sizing для всех элементов */
+/* Общие стили */
 * {
     box-sizing: border-box;
 }
 
 body {
     font-family: 'Roboto', Arial, sans-serif;
-    font-size: 1rem; /* Размер текста */
-    line-height: 1.6; /* Межстрочный интервал */
-    text-align: justify; /* Выравнивание текста */
-    color: rgb(58, 107, 36); /* Цвет текста в RGB */
-    /* Бело-золотой градиент на фон */
-    background: linear-gradient(to bottom, #e3f614, #f9fcfd); /* Плавный переход от белого к золотому */
-    background-size: cover; /* Масштабирование */
-    background-repeat: no-repeat; /* Убираем повторение */
-    background-attachment: fixed; /* Фиксируем фон при прокрутке */
-    background-position: center; /* Центрирование фона */
-    border: 2px solid #0a0909; /* Граница */
-    border-radius: 2em; /* Скругление границ */
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+    color: rgb(58, 107, 36);
+    background: linear-gradient(to bottom, #e3f614, #f9fcfd);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    border: 2px solid #0a0909;
+    border-radius: 2em;
     padding: 1.25rem;
     margin: 1.25rem auto;
     max-width: 50em;
     height: auto;
-    min-height: 100vh; /* Минимальная высота на всю высоту окна */
-    position: relative; /* Относительное позиционирование */
+    min-height: 100vh;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,75 +33,80 @@ h1, h2 {
     font-weight: 700;
     max-width: 100%;
     position: relative;
-    z-index: 2; /* Поднимаем заголовки выше */
+    z-index: 2;
     text-align: center;
 }
 
-a {
-    color: #2c1592;
+/* Навигация */
+nav a {
     text-decoration: none;
+    color: #2c1592;
+    margin: 0 15px;
 }
 
-a:hover {
-    color: rgb(20, 214, 20); /* Цвет ссылки при наведении */
+nav a:hover {
+    color: rgb(20, 214, 20);
 }
 
-p::before{
-    content: "\1F449"; 
-    /* Добавляет символ перед текстом параграфа */
-}
-
-p::after{
-    content: "\1F448";
-}
-
-ol > li::first-letter{
-    font-size: 2em; /* Увеличиваем размер */
-    font-weight: bold; /* Жирный шрифт */
-    color: hsl(16, 100%, 50%); /* Оранжевый цвет через HSL */
-}
-
-/* Установка размеров и позиционирования для изображений */
-figure {
-    max-width: 100%;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-}
-
-figure img {
+/* Формы */
+form {
     width: 100%;
-    height: auto;
-    object-fit: cover; /* Оптимальная обрезка изображений */
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+legend {
+    font-weight: bold;
+    color: #2c1592;
+}
+
+label {
     display: block;
+    margin-bottom: 5px;
 }
 
-/* Контейнер для изображений */
-figure {
-    max-width: 700px;
-    min-width: 300px;
-    margin: 0 auto;
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input:focus, select:focus {
+    border-color: #2c1592;
+}
+
+button {
+    background-color: #2c1592;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1a0c66;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f9fcfd;
+    padding: 10px 0;
     text-align: center;
-}
-
-/* Контейнер для списка ссылок */
-ul {
-    max-width: 60%;
-    min-width: 50%;
-    margin: 0 auto;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-/* Контейнер для списка задач */
-ol {
-    max-width: 60%;
-    min-width: 30%;
-    margin: 0 auto;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
 }
