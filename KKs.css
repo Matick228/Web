@@ -1,6 +1,8 @@
 /* Общие стили */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -8,8 +10,8 @@ body {
     font-size: 1rem;
     line-height: 1.6;
     text-align: justify;
-    color: rgb(58, 107, 36);
-    background: linear-gradient(to bottom, #e3f614, #f9fcfd);
+    color: rgb(7, 75, 30);
+    background: linear-gradient(to bottom, #f39248, #f9fcfd);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -26,90 +28,255 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Стиль для выделения текста */
+::selection {
+    background-color: #f9fcfd;
+    color: #2c1592;
+}
+
+/* Заголовки */
 h1, h2 {
-    color: hsl(0, 97%, 47%);
+    color: #2c1592;
     font-weight: 700;
     max-width: 100%;
     position: relative;
     z-index: 2;
     text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Навигация */
+/* Стили для ссылок */
+/* Стили для ссылок */
 nav a {
     text-decoration: none;
     color: #2c1592;
     margin: 0 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
 }
 
-nav a:hover {
+nav a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #2c1592;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+nav a:hover, nav a:focus {
     color: rgb(20, 214, 20);
+    text-decoration: none;
+    transform: scale(1.1);
 }
 
-/* Формы */
+nav a:hover::before, nav a:focus::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+nav a:active {
+    color: #1a0c66;
+}
+
+/* Стиль для кнопок */
+button {
+    background-color: #2c1592;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #1a0c66;
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+    border: 2px solid #f9fcfd;
+}
+
+button:active {
+    background-color: #17094a;
+    transform: scale(0.98);
+}
+
+/* Стили для формы */
 form {
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 25px;
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+form:hover {
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
 }
 
 fieldset {
     border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
 }
 
 legend {
     font-weight: bold;
     color: #2c1592;
+    font-size: 1.2rem;
 }
 
+/* Метки */
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #333;
 }
 
+/* Стили для полей формы */
 input, select {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
 }
 
 input:focus, select:focus {
     border-color: #2c1592;
+    outline: none;
 }
 
-button {
+/* Подсказки в полях */
+input::placeholder, select::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Обязательные для заполнения поля */
+input[required], select[required] {
+    border-color: #e63946;
+}
+
+input[required]:focus, select[required]:focus {
+    border-color: #f1faee;
+}
+
+/* Стилизация радиокнопок и чекбоксов */
+input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 12px;
+}
+
+input[type="radio"]:focus, input[type="checkbox"]:focus {
+    outline: none;
+    border: 2px solid #2c1592;
+}
+
+/* Стилизация четных и нечетных элементов списка */
+/* Стили для списка ссылок */
+ul li {
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+/* Стили для ссылок */
+ul li a {
+    text-decoration: none;
+    color: #2c1592;
+    font-weight: bold;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
+}
+
+ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
     background-color: #2c1592;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
 }
 
-button:hover {
-    background-color: #1a0c66;
+ul li a:hover, ul li a:focus {
+    color: rgb(20, 214, 20);
+    text-decoration: none;
+    transform: scale(1.1);
 }
 
+ul li a:hover::before, ul li a:focus::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+ul li a:active {
+    color: #1a0c66;
+}
+
+
+/* Псевдоклассы для чекбоксов и радиокнопок */
+input[type="radio"]:checked + label,
+input[type="checkbox"]:checked + label {
+    color: #2c1592;
+    font-weight: bold;
+}
+
+input[type="radio"]:not(:checked) + label,
+input[type="checkbox"]:not(:checked) + label {
+    color: #555;
+}
+
+/* Footer */
 footer {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(249, 252, 253, 0.95); /* Полупрозрачный фон */
-    padding: 3px 0;  /* Уменьшены отступы */
+    background-color: rgba(0, 0, 0, 0.1); /* Меньше контрастный фон */
+    padding: 5px 0; /* Меньше отступы */
     text-align: center;
-    font-size: 0.8rem;  /* Уменьшен шрифт */
-    color: #555;  /* Мягкий цвет текста */
-    border-top: 1px solid #ccc; 
-    z-index: 10;  
+    font-size: 0.8rem; /* Меньший размер шрифта */
+    color: rgba(0, 0, 0, 0.6); /* Более тусклый цвет текста */
+    border-top: 1px solid rgba(0, 0, 0, 0.2); /* Легкая граница */
+    z-index: 10;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+figure img {
+    border-radius: 15px; /* Скругление углов */
+    object-fit: cover;
+    object-position: center;
+    width: 700px;
+    height: auto;
 }
