@@ -100,13 +100,16 @@ button:hover {
     background-color: #1a0c66;
 }
 
-/* Footer */
 footer {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #f9fcfd;
-    padding: 10px 0;
+    background-color: rgba(249, 252, 253, 0.95); /* Полупрозрачный фон */
+    padding: 3px 0;  /* Уменьшены отступы */
     text-align: center;
+    font-size: 0.8rem;  /* Уменьшен шрифт */
+    color: #555;  /* Мягкий цвет текста */
+    border-top: 1px solid #ccc; 
+    z-index: 10;  
 }
