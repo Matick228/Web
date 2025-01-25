@@ -132,3 +132,38 @@ footer {
 img {
     width: 93%;
 }
+.header-buttons {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.accessibility-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.accessibility-btn:hover {
+    background-color: #218838;
+}
+
+.speaker-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.speaker-btn img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.speaker-btn:hover img {
+    transform: scale(1.1);
+}
