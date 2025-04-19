@@ -274,3 +274,26 @@ img {
 .widget-card:nth-child(3) .widget-front {
     background: linear-gradient(135deg, #6f42c1, #563d7c);
 }
+
+.widget-front img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+    object-fit: cover; /* Изменено с contain на cover для лучшего заполнения */
+    border-radius: 50%; /* Полное закругление */
+    border: 3px solid white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.widget-card:hover .widget-front img {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Для обычной версии */
+.widget-icon {
+    object-position: center; /* Центрируем изображение */
+    background-color: rgba(255,255,255,0.2); /* Лёгкий фон */
+}
+
