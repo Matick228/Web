@@ -129,3 +129,31 @@ footer {
 .back-btn:hover {
     background-color: #ccc;
 }
+
+.stats-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.stats-btn {
+    padding: 20px 40px;
+    background-color: #ff6600;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    min-width: 300px;
+    text-align: center;
+    border: 2px solid #ffcc00;
+}
+
+.stats-btn:hover {
+    background-color: #ff3300;
+    transform: scale(1.05);
+}

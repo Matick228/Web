@@ -21,21 +21,21 @@
     <main>
         <section class="form-section">
             <h2>Добавить новую транзакцию</h2>
-            <form>
-                <label for="type">Тип:</label>
-                <select id="type">
+            <form action="vision-stats.html" method="get">
+                <label for="visionType">Тип:</label>
+                <select id="visionType" name="type" required>
                     <option value="income">Доход</option>
                     <option value="expense">Расход</option>
                 </select>
                 
-                <label for="category">Категория:</label>
-                <input type="text" id="category" required>
+                <label for="visionCategory">Категория:</label>
+                <input type="text" id="visionCategory" name="category" required>
                 
-                <label for="amount">Сумма:</label>
-                <input type="number" id="amount" required>
+                <label for="visionAmount">Сумма:</label>
+                <input type="number" id="visionAmount" name="amount" required>
                 
-                <label for="date">Дата:</label>
-                <input type="date" id="date" required>
+                <label for="visionDate">Дата:</label>
+                <input type="date" id="visionDate" name="date" required>
                 
                 <button type="submit">Добавить</button>
             </form>
