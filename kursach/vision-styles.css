@@ -265,8 +265,6 @@ footer {
     box-shadow: 0 8px 16px rgba(0,0,0,0.4);
 }
 
-
-/* Для версии слабовидящих */
 .widget-icon {
     object-position: center;
     background-color: rgba(255,204,0,0.3);
